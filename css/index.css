@@ -1,3 +1,269 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Your code starts here! */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.container {
+  width: 880px;
+  /* TB LR */
+  margin: 0 auto;
+}
+
+/* header */
+
+header nav  {
+  display: flex;
+}
+
+header nav a {
+  font-size: 16px;
+  color: gray;
+  text-decoration: none; 
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+header .logo {
+  margin-top: 20px;
+}
+
+.links {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.links a {
+  padding-top: 6%;
+  width: 75%;
+}
+
+
+
+
+/* cta */
+
+.cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.cta .cta-text {
+	text-align: center;
+	font-size: 90px;
+	padding-right: 80px;
+}
+
+.cta .cta-text button {
+  background: white;
+  vertical-align: top;
+  margin-top: 6px;
+  padding: 8px 44px;
+  font-size: 17px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.cta .cta-text button:hover {
+  background: gray;
+  color: white;
+}
+
+
+
+.main-content {
+  border-top: 1px solid black;
+  margin-top: 76px;
+  padding-top: 39px;
+}
+
+.main-content .top-content {
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.main-content .top-content .text-content:last-child {
+  margin-right: 0;
+}
+
+.main-content .middle-img {
+  margin-top: 45px;
+}
+
+.main-content .bottom-content {
+  margin-top: 37px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.main-content .bottom-content .text-content:last-child {
+  margin-right: 0;
+}
+
+.contact {
+  margin-top: 57px;
+  border-top: 1px solid black;
+  padding: 39px 10px 0;
+}
+
+.contact p {
+  margin: 20px 0;
+}
+
+footer {
+  margin: 32px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (max-width: 800px) {
+    .cta img {
+        display: none;
+    }
+    nav {
+      flex-direction: column;      
+    }
+    .great-idea {
+      order: -1;
+      text-align: center;
+      padding-right: 4%;
+      padding-bottom: 4%;
+    }
+    .links {
+      display: flex;
+      justify-content: space-around;
+    }
+}
+
+@media (max-width: 500px) {
+    .cta img {
+        display: none;
+    }
+    
+    .links {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding-left: 0px;
+      border-top: 3px solid grey;
+    }
+    .links a {
+      padding-top: 3%;
+      font-size: 25px;
+      width: 100%;
+      border-bottom: 3px solid grey;
+      padding-bottom: 3%;
+    }
+    .logo {
+      padding-left: 5%;
+    }
+    .cta-text {
+      padding-left: 10%;
+      width: 100%;
+    }
+    .top-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .bottom-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-content p  {
+      padding-top: 1%;
+    }
+    .bottom-content p  {
+      padding-top: 1%;
+    }
+    .top-content h4 {
+      padding-top: 2%;
+    }
+    .bottom-content h4 {
+      padding-top: 2%;
+    }
+}
 
